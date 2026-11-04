@@ -218,7 +218,7 @@
 .pf-card:hover { transform: translateY(-8px); border-color: var(--purple-bright); box-shadow: 0 25px 60px rgba(124,58,237,0.25); }
 .pf-card:hover::before { opacity: 1; }
 .pf-cover {
-  position: relative; height: 170px; display: flex; align-items: center; justify-content: center;
+  position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
   background: var(--cover, linear-gradient(135deg,#2e1065,#5b21b6)); overflow: hidden;
 }
 .pf-cover::after {
@@ -228,6 +228,10 @@
 }
 .pf-emoji { position: relative; z-index: 1; font-size: 3.6rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)); transition: transform .4s; }
 .pf-card:hover .pf-emoji { transform: scale(1.15) rotate(-5deg); }
+.pf-img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .5s; }
+.pf-card:hover .pf-img { transform: scale(1.06); }
+.pf-cover.has-img::after { display: none; }
+.pf-cover.has-img::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 35%); }
 .pf-badge {
   position: absolute; top: .9rem; left: .9rem; z-index: 2; padding: .25rem .8rem; border-radius: 50px;
   background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(6px);
@@ -275,27 +279,40 @@
 /* =====================================================================
    PROJECTS LIST - edit / add your projects here
    tech : "wordpress" | "php" | "laravel"
-   sub  : the sub-category key (see CATEGORIES below)
+   sub  : the sub-category key, or a list of keys e.g. ["business", "custom"] (see CATEGORIES below)
    url  : optional live link (shows a "Visit Site" button)
    status : optional "Ongoing" | "Completed" | "Client Project" ...
+   img  : optional cover image path (shown instead of the emoji)
    ===================================================================== */
 const PROJECTS = [
   /* ---------- WordPress ---------- */
+  // woocommerce
   { tech: "wordpress", sub: "woocommerce", emoji: "🧴", title: "White Cover Skincare Store",
     desc: "E-commerce store for a Lahore-based skincare brand with product categories, discounts, quick view, wishlist and Slider Revolution banners.",
-    tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://whitecover.pk" },
+    tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://whitecover.pk", img: "images/portfolio/white-cover.webp" },
   { tech: "wordpress", sub: "woocommerce", emoji: "🎆", title: "Morethan Fireworks (UK)",
     desc: "WooCommerce store with a category-based catalogue, sale pricing, wishlist and compare features, and a full cart and checkout flow.",
-    tags: ["WordPress", "WooCommerce", "UK Client"], status: "Client Project", url: "https://morethanfireworks.com" },
-  { tech: "wordpress", sub: "business", emoji: "📦", title: "Andaz Packages Website",
-    desc: "Elementor-based corporate website for a printing and packaging company, with service pages and a quote-request flow.",
-    tags: ["WordPress", "Elementor", "Business Website"], status: "Client Project", url: "https://andazpackages.com" },
-  { tech: "wordpress", sub: "woocommerce", emoji: "⌚", title: "Watch & Accessories Store",
-    desc: "Black and gold online store with an image slider and product collections, fully editable in Elementor.",
-    tags: ["WordPress", "WooCommerce", "Elementor"], status: "Ongoing" },
+    tags: ["WordPress", "WooCommerce", "UK Client"], status: "Client Project", url: "https://morethanfireworks.com", img: "images/portfolio/morethan-fireworks.webp" },
+  { tech: "wordpress", sub: "woocommerce", emoji: "🔥", title: "Wiqaya Tech Fire Safety & Security Website",
+    desc: "WooCommerce website for a Lebanon-based fire safety and security company, with a multi-level product catalogue, featured and sale products, product search, a Slider Revolution banner, a contact form and WhatsApp chat.",
+    tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://wiqayatech.com", img: "images/portfolio/wiqaya-tech.webp" },
+      { tech: "wordpress", sub: "woocommerce", emoji: "👗", title: "Romanza Fashion Store",
+    desc: "Online fashion store with product categories, a full cart and checkout flow, and a responsive shopping experience on every device.",
+    tags: ["WordPress", "WooCommerce", "Fashion"], status: "Client Project", url: "https://romanzafashion.com.pk", img: "images/portfolio/romanza-fashion.webp" },
+    // business
   { tech: "wordpress", sub: "business", emoji: "🧪", title: "Alnas Medical Lab Website",
     desc: "Professional website for a medical laboratory, built to present its services clearly and work well on every device.",
-    tags: ["Business Website", "Responsive"], status: "Client Project" },
+    tags: ["Business Website", "Responsive", "Healthcare"], status: "Client Project", url: "https://alnasmedical.com", img: "images/portfolio/alnas-lab.webp" },
+    { tech: "wordpress", sub: ["business"], emoji: "🏥", title: "Careway Medical Lab Website",
+    desc: "Elementor-based website for a diagnostic laboratory with branches in Lahore and Karachi, featuring a Slider Revolution banner, lab services listing, appointment request form and an online report-finding portal.",
+    tags: ["WordPress", "Elementor", "Slider Revolution", "Healthcare"], status: "Client Project", url: "https://carewaymedicallab.com", img: "images/portfolio/careway-lab.webp" },
+     { tech: "wordpress", sub: "business", emoji: "✈️", title: "Pace Travel Website (UK)",
+    desc: "Elementor-based website for a UK travel agency, with a flight enquiry form, tours and activities listings, destination categories, featured trips with sale pricing and WhatsApp chat.",
+    tags: ["WordPress", "Elementor", "Travel", "UK Client"], status: "Client Project", url: "https://pacetravels.co.uk", img: "images/portfolio/pace-travel.webp" },
+    // business + custom
+    { tech: "wordpress", sub: ["business", "custom"], emoji: "📦", title: "Andaz Packages Website",
+    desc: "Elementor-based corporate website for a printing and packaging company, with service pages and a quote-request flow.",
+    tags: ["WordPress", "Elementor", "Business Website"], status: "Client Project", url: "https://andazpackages.com", img: "images/portfolio/andaz-packages.webp" },
 
   /* ---------- PHP ---------- */
   { tech: "php", sub: "websites", emoji: "🌐", title: "PHP Business Websites",
@@ -313,14 +330,14 @@ const PROJECTS = [
 
   /* ---------- Laravel ---------- */
   { tech: "laravel", sub: "webapps", emoji: "🏗️", title: "Real Estate & Construction Management",
-    desc: "Laravel system for plot sales, installments, construction materials and project-wise accounts.",
-    tags: ["Laravel", "MySQL", "Reports"], status: "Ongoing" },
+    desc: "Laravel-based system for plot sales, installments, construction materials and project-wise accounts. Development is ongoing.",
+    tags: ["Laravel", "MySQL", "Reports"], status: "Ongoing", img: "images/portfolio/real-estate.webp" },
   { tech: "laravel", sub: "webapps", emoji: "📒", title: "EasyBooks Enterprises Software",
-    desc: "Laravel-based business software with continuous feature development, reports and improvements.",
-    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing" },
-  { tech: "laravel", sub: "webapps", emoji: "📊", title: "Muhammad EasyBooks Software",
-    desc: "Laravel-based business software tailored to the client, with ongoing development and support.",
-    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing" },
+    desc: "Laravel-based business software with continuous feature development, reports and improvements. Currently in progress.",
+    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/easybooks.webp" },
+  { tech: "laravel", sub: "webapps", emoji: "👔", title: "Software for Creative Uniform (UAE)",
+    desc: "Laravel-based business management software built for Creative Uniform, covering day-to-day operations, accounts and reports.",
+    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/creative-easybooks.webp" },
   { tech: "laravel", sub: "api", emoji: "🔌", title: "Task Management REST API",
     desc: "Token-authenticated API with projects, tasks, comments and labels, running on Laravel Sail and tested with Postman.",
     tags: ["Laravel", "Sanctum", "Docker", "Postman"] },
@@ -349,6 +366,8 @@ const CATEGORIES = {
 };
 
 const el = (id) => document.getElementById(id);
+// a project's sub can be one key ("business") or a list (["business", "custom"])
+const subsOf = (p) => [].concat(p.sub);
 const tabs = [...document.querySelectorAll(".pf-tab")];
 const order = ["wordpress", "php", "laravel"];
 let tech = "wordpress", sub = "all";
@@ -367,21 +386,21 @@ function render() {
 
   // chips
   const chips = [["all", "All", inTech.length]].concat(
-    Object.entries(cat.subs).map(([k, label]) => [k, label, inTech.filter((p) => p.sub === k).length])
+    Object.entries(cat.subs).map(([k, label]) => [k, label, inTech.filter((p) => subsOf(p).includes(k)).length])
   );
   el("pfChips").innerHTML = chips.map(([k, label, n], i) =>
     `<button class="pf-chip ${k === sub ? "active" : ""}" data-sub="${k}" style="animation-delay:${i * 50}ms">${label}<small>${n}</small></button>`
   ).join("");
 
   // cards
-  const list = inTech.filter((p) => sub === "all" || p.sub === sub);
+  const list = inTech.filter((p) => sub === "all" || subsOf(p).includes(sub));
   el("pfResult").textContent = `SHOWING ${list.length} ${list.length === 1 ? "PROJECT" : "PROJECTS"}`;
   el("pfGrid").innerHTML = list.length ? list.map((p, i) => `
     <article class="pf-card" style="animation-delay:${i * 70}ms">
-      <div class="pf-cover" style="--cover:${cat.cover}">
-        <span class="pf-badge">${cat.subs[p.sub] || ""}</span>
+      <div class="pf-cover ${p.img ? "has-img" : ""}" style="--cover:${cat.cover}">
+        <span class="pf-badge">${cat.subs[sub !== "all" && subsOf(p).includes(sub) ? sub : subsOf(p)[0]] || ""}</span>
         ${p.status ? `<span class="pf-status ${p.status === "Ongoing" ? "ongoing" : ""}">${p.status}</span>` : ""}
-        <span class="pf-emoji">${p.emoji}</span>
+        ${p.img ? `<img class="pf-img" src="${p.img}" alt="${p.title}" loading="lazy">` : `<span class="pf-emoji">${p.emoji}</span>`}
       </div>
       <div class="pf-info">
         <div class="pf-tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
