@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiran Majeed | Full Stack Web Developer</title>
+    <meta
+      name="description"
+      content="Kiran Majeed is a Full Stack Web Developer working with Laravel, PHP, WordPress and WooCommerce."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Hero */
+      @media (min-width: 1025px) {
+        .hero {
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        }
+      }
+      .hero-content {
+        min-width: 0;
+        container-type: inline-size;
+      }
+      @media (max-width: 1024px) {
+        .hero-content {
+          width: 100%;
+        }
+      }
+      .hero-visual {
+        min-width: 0;
+      }
+      .hero .hero-title {
+        font-size: clamp(2.2rem, 4vw, 3.5rem); /* About ki heading jitna */
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+      }
+      .hero .hero-title .title-line {
+        white-space: nowrap;
+      }
+
+      /* Typed line: chhota, fix size */
+      .hero .hero-title .title-line.accent {
+        font-size: clamp(1.4rem, calc(100cqw / 17), 2.8rem);
+        min-height: 1.2em;
+        line-height: 1.2;
+        margin: 0.15em 0;
+      }
+      .orb.orb-sm {
+        font-size: 0.5rem;
+        letter-spacing: -0.3px;
+      }
+      .orb-6 {
+        --dur: 4s;
+        --del: -2.5s;
+        font-size: 1rem;
+      }
+      .social-links {
+        flex-wrap: wrap;
+      }
+      .floating-code.code-1 {
+        top: auto;
+        bottom: 10%;
+        left: auto;
+        right: 38%;
+      }
+      .floating-code.code-2 {
+        top: 25%;
+        bottom: auto;
+        left: auto;
+        right: 38%;
+      }
+
+      /* Projects: sab cards ka size same */
+      .projects-grid {
+        align-items: stretch;
+      }
+      .project-link {
+        display: block;
+        height: 100%;
+        color: inherit;
+      }
+      .project-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-link .project-card {
+        cursor: pointer;
+      }
+      .project-image {
+        flex-shrink: 0;
+        aspect-ratio: 16 / 9;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .project-card:hover .project-image img {
+        transform: scale(1.05);
+      }
+      .project-info {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- HEADER -->
+    <header id="header">
+      <nav class="nav">
+        <div class="logo">
+          <span class="logo-bracket">&lt;</span>Kiran Majeed<span
+            class="logo-bracket"
+            >/&gt;</span
+          >
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu-btn" id="menuBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="floating-code code-1">php artisan serve</div>
+        <div class="floating-code code-2">Route::get('/api/tasks');</div>
+        <div class="floating-code code-3">add_action('init', 'build');</div>
+        <div class="floating-code code-4">\Elementor\Plugin::instance();</div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for Work</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Developing</span>
+          <span class="title-line accent">
+            <span id="typedText"></span><span class="type-cursor">|</span>
+          </span>
+          <span class="title-line">That Work</span>
+        </h1>
+        <p class="hero-desc">
+          Full Stack Web Developer working with Laravel, PHP and MySQL, and
+          creating WordPress and WooCommerce websites, with clean code and
+          attention to detail.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Hire Me</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="2">0</span><span>+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="50">0</span><span>+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Core Platforms</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-card">
+          <div class="code-header">
+            <span class="dot red"></span><span class="dot yellow"></span
+            ><span class="dot green"></span>
+            <span class="file-name">developer.php</span>
+          </div>
+          <div class="code-body">
+            <div class="code-line">
+              <span class="kw">class</span>
+              <span class="cls">Developer</span> {
+            </div>
+            <div class="code-line indent">
+              <span class="kw">public</span>
+              <span class="prop">$name</span> =
+              <span class="str">"Kiran Majeed"</span>;
+            </div>
+            <div class="code-line indent">
+              <span class="kw">public</span>
+              <span class="prop">$role</span> =
+              <span class="str">"Full Stack Developer"</span>;
+            </div>
+            <div class="code-line indent">
+              <span class="kw">public</span>
+              <span class="prop">$skills</span> = [
+            </div>
+            <div class="code-line indent2">
+              <span class="str">"Laravel"</span>,
+              <span class="str">"PHP"</span>,
+              <span class="str">"MySQL"</span>,
+            </div>
+            <div class="code-line indent2">
+              <span class="str">"WordPress"</span>,
+              <span class="str">"WooCommerce"</span>,
+              <span class="str">"Elementor"</span>
+            </div>
+            <div class="code-line indent">];</div>
+            <div class="code-line indent">
+              <span class="kw">public</span>
+              <span class="prop">$passion</span> =
+              <span class="str">"Web Development"</span>;
+            </div>
+            <div class="code-line">}</div>
+          </div>
+        </div>
+        <div class="tech-orbs">
+          <div class="orb orb-1">PHP</div>
+          <div class="orb orb-2">JS</div>
+          <div class="orb orb-3 orb-sm">Laravel</div>
+          <div class="orb orb-4">WP</div>
+          <div class="orb orb-5 orb-sm">Elementor</div>
+          <div class="orb orb-6">SQL</div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>01. ABOUT ME</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-wrap reveal-left">
+            <div class="about-image-frame">
+              <div class="about-image-placeholder"></div>
+              <div class="about-badge">Full Stack Dev</div>
+              <div class="about-years">
+                <span class="years-num">2+</span>
+                <span>Years of<br />Experience</span>
+              </div>
+            </div>
+            <div class="about-dots"></div>
+          </div>
+          <div class="about-text reveal-right">
+            <h2 class="section-title">
+              Turning Ideas Into <span class="purple">Working Software</span>
+            </h2>
+            <p class="about-desc">
+              I'm Kiran Majeed, a Full Stack Web Developer from Punjab,
+              Pakistan, with 2+ years of experience. I work with Laravel, PHP
+              and MySQL on web applications, and with WordPress, WooCommerce
+              and Elementor on websites and online stores.
+            </p>
+            <p class="about-desc">
+              I enjoy turning business requirements into clean, reliable
+              software, from database design and reports to the screens people
+              use every day.
+            </p>
+            <div class="about-tags">
+              <span class="tag">Laravel &amp; PHP</span>
+              <span class="tag">WordPress &amp; WooCommerce</span>
+              <span class="tag">Clean Code</span>
+              <span class="tag">Problem Solver</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+            <div class="about-btns">
+              <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+              <a
+                href="Kiran_Majeed_CV.pdf"
+                class="btn-text"
+                download
+                >Download CV <span>↓</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-sec section" id="skills">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>02. SKILLS</span>
+        </div>
+        <h2 class="section-title center">
+          My <span class="purple">Tech Stack</span>
+        </h2>
+        <p class="section-subtitle">
+          Languages, frameworks and tools I use to build and ship web projects
+        </p>
+        <div class="skills-grid reveal-up">
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="cat-icon">🎨</span> Frontend
+            </h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>HTML / CSS</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>jQuery / AJAX</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Bootstrap</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Tailwind CSS</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Elementor</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>React (learning)</span><span>35%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="35"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="cat-icon">⚙️</span> Backend
+            </h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>PHP</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Laravel</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>MySQL</span><span>82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>REST APIs</span><span>78%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>WordPress / WooCommerce</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="cat-icon">🛠</span> Tools
+            </h3>
+            <div class="skill-icons">
+              <div class="skill-icon-card"><span>Git / Version Control</span></div>
+              <div class="skill-icon-card"><span>GitHub</span></div>
+              <div class="skill-icon-card"><span>cPanel</span></div>
+              <div class="skill-icon-card"><span>VS Code</span></div>
+              <div class="skill-icon-card"><span>Postman</span></div>
+              <div class="skill-icon-card"><span>Docker</span></div>
+              <div class="skill-icon-card"><span>Composer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>03. EXPERIENCE</span>
+        </div>
+        <h2 class="section-title center">
+          Work <span class="purple">Journey</span>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">February 2024 – Present</div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3>Full Stack Web Developer</h3>
+                <span class="company-badge">ThemillionaireSoft</span>
+              </div>
+              <p>
+                Working on a Laravel-based ERP accounting software: building
+                new features and reports, designing database structures, fixing
+                bugs and improving existing modules.
+              </p>
+              <div class="timeline-tags">
+                <span>Laravel</span><span>PHP</span><span>MySQL</span
+                ><span>jQuery</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item right reveal-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Previous Experience</div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3>Web Developer</h3>
+                <span class="company-badge">Sunrise Tech Solutions</span>
+              </div>
+              <p>
+                Worked on WordPress and WooCommerce websites with Elementor
+                and on PHP backend development, which led to my move into
+                full stack Laravel development.
+              </p>
+              <div class="timeline-tags">
+                <span>WordPress</span><span>WooCommerce</span
+                ><span>Elementor</span><span>PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">PHP Experience</div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3>PHP Developer</h3>
+                <span class="company-badge">Core PHP</span>
+              </div>
+              <p>
+                Worked on a custom JavaScript dashboard and PHP-based websites,
+                and on an inventory system and web applications in core PHP.
+              </p>
+              <div class="timeline-tags">
+                <span>Core PHP</span><span>JavaScript</span
+                ><span>Inventory System</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item right reveal-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Graduated 2025</div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3>BS Computer Science</h3>
+                <span class="company-badge">KFUEIT</span>
+              </div>
+              <p>
+                Bachelor's degree from Khawaja Fareed University of Engineering
+                &amp; Information Technology, graduating with a 3.68 GPA.
+              </p>
+              <div class="timeline-tags">
+                <span>Software Engineering</span><span>Databases</span
+                ><span>Web Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-sec section" id="services">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>04. SERVICES</span>
+        </div>
+        <h2 class="section-title center">
+          What I Can <span class="purple">Build</span>
+        </h2>
+        <p class="section-subtitle">
+          Websites and web applications built around your business
+          requirements
+        </p>
+        <div class="services-grid">
+          <div class="service-card reveal-up">
+            <span class="service-icon">🧩</span>
+            <h3>Laravel Web Applications</h3>
+            <p>
+              Custom websites and web applications built with Laravel,
+              designed around your business requirements.
+            </p>
+            <ul class="service-list">
+              <li>Features built as per your requirements</li>
+              <li>Secure, well-structured database</li>
+              <li>Clean, maintainable code</li>
+            </ul>
+          </div>
+          <div class="service-card reveal-up">
+            <span class="service-icon">📝</span>
+            <h3>WordPress Websites</h3>
+            <p>
+              Responsive business websites you can edit yourself with Elementor.
+            </p>
+            <ul class="service-list">
+              <li>Custom Elementor design</li>
+              <li>Mobile-friendly and fast</li>
+              <li>Basic SEO setup</li>
+            </ul>
+          </div>
+          <div class="service-card reveal-up">
+            <span class="service-icon">🛒</span>
+            <h3>WooCommerce Stores</h3>
+            <p>
+              Complete online stores ready to take orders from day one.
+            </p>
+            <ul class="service-list">
+              <li>Products, cart &amp; checkout</li>
+              <li>Payment and shipping setup</li>
+              <li>Order management</li>
+            </ul>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a href="coming-soon.html" class="btn btn-primary">
+            <span>View All Services</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-sec section" id="projects">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>05. PROJECTS</span>
+        </div>
+        <h2 class="section-title center">
+          Featured <span class="purple">Work</span>
+        </h2>
+        <div class="projects-grid">
+          <a
+            href="https://whitecover.pk"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+          >
+            <div class="project-card reveal-up" data-category="wordpress">
+              <div class="project-image">
+                <img
+                  src="images/portfolio/white-cover.webp"
+                  alt="White Cover Skincare Store"
+                />
+                <div class="project-status">Client Project</div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags"><span>WordPress</span><span>WooCommerce</span><span>Slider Revolution</span></div>
+                <h3>White Cover Skincare Store</h3>
+                <p>E-commerce store for a Lahore-based skincare brand with product categories, discounts, quick view, wishlist and Slider Revolution banners.</p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://whitecover.pk"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+          >
+          <div class="project-card reveal-up" data-category="wordpress">
+            <div class="project-image">
+              <div class="project-placeholder p3">
+                 <img
+                  src="images/portfolio/andaz-packages.webp"
+                  alt="Andaz Packages"
+                />
+                <p>Andaz Packages</p>
+              </div>
+              <div class="project-status">Client Project</div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>WordPress</span><span>Elementor</span><span>Business Website</span></div>
+              <h3>Andaz Packages Website</h3>
+              <p>Elementor-based corporate website for a printing and packaging company, with service pages and a quote-request flow.</p>
+            </div>
+          </div>
+          </a>
+          <a
+            href="https://alnasmedical.com"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+          >
+          <div class="project-card reveal-up" data-category="wordpress">
+            <div class="project-image">
+              <div class="project-placeholder p4">
+                <img
+                  src="images/portfolio/alnas-lab.webp"
+                  alt="Alnas Medical Lab"
+                />
+                <p>Alnas Medical Lab</p>
+              </div>
+              <div class="project-status">Client Project</div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>Website</span><span>Responsive</span><span>Healthcare</span></div>
+              <h3>Alnas Medical Lab Website</h3>
+              <p>Professional website for a medical laboratory, built to present its services clearly and work well on every device.</p>
+            </div>
+          </div>
+          </a>
+          <div class="project-card reveal-up" data-category="laravel">
+            <div class="project-image">
+              <div class="project-placeholder p2">
+               <img
+                  src="images/portfolio/real-estate.webp"
+                  alt="Real Estate & Construction Management"
+                />
+                <p>Real Estate &amp; Construction</p>
+              </div>
+              <div class="project-status progress">Ongoing</div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>Laravel</span><span>MySQL</span><span>Reports</span></div>
+              <h3>Real Estate &amp; Construction Management</h3>
+              <p>Laravel-based system for plot sales, installments, construction materials and project-wise accounts. Development is ongoing.</p>
+            </div>
+          </div>
+          <div class="project-card reveal-up" data-category="laravel">
+            <div class="project-image">
+              <div class="project-placeholder p5">
+                <img
+                  src="images/portfolio/easybooks.webp"
+                  alt="EasyBooks Enterprises"
+                />
+                <p>EasyBooks Enterprises</p>
+              </div>
+              <div class="project-status progress">Ongoing</div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+              <h3>EasyBooks Enterprises Software</h3>
+              <p>Laravel-based business software with continuous feature development, reports and improvements. Currently in progress.</p>
+            </div>
+          </div>
+          <div class="project-card reveal-up" data-category="laravel">
+            <div class="project-image">
+              <div class="project-placeholder p6">
+                <img
+                  src="images/portfolio/creative-easybooks.webp"
+                  alt="Muhammad EasyBooks"
+                />
+                <p>Creative EasyBooks</p>
+              </div>
+              <div class="project-status progress">Ongoing</div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+              <h3>Software for Creative Uniform (UAE)</h3>
+      <p>Laravel-based business management software built for Creative Uniform, covering day-to-day operations, accounts and reports.</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a href="coming-soon.html" class="btn btn-primary">
+            <span>View More Projects</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-sec section" id="contact">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>06. CONTACT</span>
+        </div>
+        <h2 class="section-title center">
+          Let's <span class="purple">Connect</span>
+        </h2>
+        <p class="section-subtitle">
+          Have a project in mind? Let's build something great together.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>kiranmajeed654@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📱</div>
+              <div>
+                <h4>WhatsApp</h4>
+                <p>+92 309 8096126</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Location</h4>
+                <p>Punjab, Pakistan</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://github.com/kiranmajeediss"
+                class="social-link"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/kiran-majeed-dev/"
+                class="social-link"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                href="https://www.behance.net/kiranmajeed-dev"
+                class="social-link"
+                target="_blank"
+                rel="noopener"
+                >Behance</a
+              >
+              <a
+                href="https://www.instagram.com/kiran__079"
+                class="social-link"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+            </div>
+          </div>
+          <div class="contact-form reveal-right">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input type="text" placeholder="John Doe" />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" placeholder="john@example.com" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <input type="text" placeholder="Project Discussion" />
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea
+                  rows="5"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary full-width">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Kiran Majeed<span
+            class="logo-bracket"
+            >/&gt;</span
+          >
+        </div>
+        <p>Building reliable web applications and websites.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Kiran Majeed. All rights reserved.</p>
+        <p class="footer-scroll-top"><a href="#hero">↑ Back to Top</a></p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

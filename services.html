@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Kiran Majeed</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- HEADER -->
+<header id="header" class="scrolled">
+  <nav class="nav">
+    <div class="logo">
+      <a href="index.html"><span class="logo-bracket">&lt;</span>Kiran Majeed<span class="logo-bracket">/&gt;</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+      <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+      <li><a href="services.html" class="nav-link active">Services</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- SERVICES HERO -->
+<section class="services-hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="section-label" style="justify-content:center;margin-bottom:1rem;">
+      <span class="label-line"></span>
+      <span>WHAT I OFFER</span>
+      <span class="label-line"></span>
+    </div>
+    <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);text-align:center;margin-bottom:1rem;">
+      My <span class="purple">Services</span>
+    </h1>
+    <p class="section-subtitle" style="font-size:1.1rem;">
+      Click on any service to see full details, features and starting prices.
+      Web solutions built with Laravel, WordPress and WooCommerce, tailored to your business.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICE CATEGORIES -->
+<section class="section" style="padding-top:2rem;">
+  <div class="container">
+
+    <!-- Category Label -->
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="service-filter-tabs">
+        <button class="svc-tab active" data-cat="all">All Services</button>
+        <button class="svc-tab" data-cat="laravel">Laravel</button>
+        <button class="svc-tab" data-cat="wordpress">WordPress</button>
+        <button class="svc-tab" data-cat="fixes">Fixes &amp; Customization</button>
+      </div>
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="services-grid" id="servicesGrid">
+
+      <div class="service-card reveal-up" data-cat="laravel">
+        <span class="service-icon">🧩</span>
+        <div class="service-badge">Most Popular</div>
+        <h3>Laravel Web Application</h3>
+        <p>Custom business applications built from scratch with Laravel, PHP and MySQL, shaped around your workflow.</p>
+        <ul class="service-list">
+          <li>Database design &amp; clean MVC structure</li>
+          <li>Admin panel with role-based access</li>
+          <li>Accounting, inventory &amp; sales workflows</li>
+          <li>Filterable reports with exports</li>
+          <li>Interactive tables with jQuery &amp; DataTables</li>
+          <li>Support after delivery</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$400+</span>
+          <button class="service-cta" data-service="laravel-app">View Details</button>
+        </div>
+      </div>
+
+      <div class="service-card reveal-up" data-cat="laravel">
+        <span class="service-icon">🔌</span>
+        <h3>REST API Development</h3>
+        <p>Secure, well-structured Laravel APIs for your web or mobile application.</p>
+        <ul class="service-list">
+          <li>Token authentication (Sanctum)</li>
+          <li>CRUD endpoints with validation</li>
+          <li>Filtering &amp; pagination</li>
+          <li>Tested with Postman</li>
+          <li>Docker (Sail) setup</li>
+          <li>Clean, documented code</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$150+</span>
+          <button class="service-cta" data-service="rest-api">View Details</button>
+        </div>
+      </div>
+
+      <div class="service-card reveal-up" data-cat="wordpress">
+        <span class="service-icon">📝</span>
+        <h3>WordPress Website</h3>
+        <p>Professional, responsive WordPress websites that you can edit yourself with Elementor.</p>
+        <ul class="service-list">
+          <li>Custom Elementor design</li>
+          <li>Responsive on all devices</li>
+          <li>Basic on-page SEO</li>
+          <li>Speed optimisation</li>
+          <li>Contact forms &amp; social links</li>
+          <li>Short guide to manage your site</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$150+</span>
+          <button class="service-cta" data-service="wordpress-site">View Details</button>
+        </div>
+      </div>
+
+      <div class="service-card reveal-up" data-cat="wordpress">
+        <span class="service-icon">🛒</span>
+        <div class="service-badge premium">Premium</div>
+        <h3>WooCommerce Store</h3>
+        <p>Complete online store on WordPress and WooCommerce, ready to start selling.</p>
+        <ul class="service-list">
+          <li>Product catalogue &amp; variations</li>
+          <li>Cart &amp; checkout setup</li>
+          <li>Payment &amp; shipping configuration</li>
+          <li>Order &amp; customer management</li>
+          <li>Custom store layout in Elementor</li>
+          <li>Basic store training</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$250+</span>
+          <button class="service-cta" data-service="woocommerce">View Details</button>
+        </div>
+      </div>
+
+      <div class="service-card reveal-up" data-cat="wordpress">
+        <span class="service-icon">🚀</span>
+        <h3>Landing Page</h3>
+        <p>Clean, conversion-focused landing pages built with Elementor or custom HTML/CSS/JS.</p>
+        <ul class="service-list">
+          <li>Conversion-focused layout</li>
+          <li>Clear call-to-action sections</li>
+          <li>Lead capture / WhatsApp form</li>
+          <li>Mobile-first design</li>
+          <li>Fast delivery (2-3 days)</li>
+          <li>Revisions included</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$80+</span>
+          <button class="service-cta" data-service="landing-page">View Details</button>
+        </div>
+      </div>
+
+      <div class="service-card reveal-up" data-cat="fixes">
+        <span class="service-icon">🔧</span>
+        <h3>Customization &amp; Bug Fixes</h3>
+        <p>Fixes, new features and improvements for your existing Laravel or WordPress website.</p>
+        <ul class="service-list">
+          <li>Bug fixes &amp; error resolution</li>
+          <li>New features &amp; custom modules</li>
+          <li>WordPress plugin / theme issues</li>
+          <li>Layout, colour &amp; content changes</li>
+          <li>Performance improvements</li>
+          <li>24-48 hour turnaround for small fixes</li>
+        </ul>
+        <div class="service-price">
+          <span class="price">$40+</span>
+          <button class="service-cta" data-service="fixes">View Details</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHY CHOOSE ME -->
+    <div class="why-section">
+      <div class="section-label" style="justify-content:center;margin:4rem 0 2rem;">
+        <span class="label-line"></span>
+        <span>WHY CHOOSE ME</span>
+        <span class="label-line"></span>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal-up">
+          <span class="why-icon">⚡</span>
+          <h4>Fast Delivery</h4>
+          <p>Quick turnaround without compromising quality, with projects delivered within the agreed timeline.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <span class="why-icon">💎</span>
+          <h4>Clean Code</h4>
+          <p>Well-structured, maintainable code that is easy to extend after delivery.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <span class="why-icon">🔄</span>
+          <h4>Revisions Included</h4>
+          <p>Feedback is part of the process, and I refine the work until it fits what you need.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <span class="why-icon">🤝</span>
+          <h4>Clear Communication</h4>
+          <p>Regular updates and quick replies, so you always know where your project stands.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="services-bottom-cta reveal-up">
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem;">
+        Ready to Start Your <span class="purple">Project?</span>
+      </h2>
+      <p style="text-align:center;color:var(--gray-light);margin-bottom:2rem;">
+        Let's discuss your requirements and build something amazing together!
+      </p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="index.html#contact" class="btn btn-primary">
+          <span>Get Free Quote</span>
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </a>
+        <a href="projects.html" class="btn btn-ghost">
+          <span>View My Work</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <h2 id="modalTitle" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:0.3rem;"></h2>
+        <span id="modalPrice" style="color:var(--purple-bright);font-weight:700;"></span>
+      </div>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body">
+      <p id="modalDesc" style="margin-bottom:1rem;"></p>
+      <h4 style="color:var(--white);margin-bottom:0.5rem;">What's Included:</h4>
+      <ul id="modalFeatures" style="margin-bottom:1.5rem;"></ul>
+      <a href="index.html#contact" class="btn btn-primary" style="width:100%;justify-content:center;">
+        <span>Order This Service</span>
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>Kiran Majeed<span class="logo-bracket">/&gt;</span>
+    </div>
+    <p>Building reliable web applications and websites.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kiran Majeed. Built with ❤️ using HTML, CSS &amp; JavaScript</p>
+    <p class="footer-scroll-top"><a href="#">↑ Back to Top</a></p>
+  </div>
+</footer>
+
+<style>
+.service-badge {
+  position: absolute; top: 1.2rem; right: 1.2rem;
+  background: var(--gradient);
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.service-badge.premium { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.service-card { position: relative; }
+.service-filter-tabs { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem; }
+.svc-tab {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--gray); font-size: 0.85rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 50px;
+  cursor: pointer; transition: all 0.3s;
+}
+.svc-tab.active, .svc-tab:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+}
+.why-section { margin-top: 5rem; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.why-card {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.8rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.why-card:hover { border-color: var(--purple); transform: translateY(-4px); }
+.why-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.why-card h4 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 0.5rem; }
+.why-card p { font-size: 0.85rem; color: var(--gray); }
+.services-bottom-cta {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 20px; padding: 4rem 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(13,13,20,0.9));
+}
+.service-card.s-hidden { display: none; }
+/* Services page responsive */
+@media (max-width: 1024px) {
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .services-hero { padding: 9rem 2rem 4rem; }
+}
+@media (max-width: 768px) {
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .why-section { margin-top: 3rem; }
+  .why-card { padding: 1.3rem; }
+  .why-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+  .service-filter-tabs { gap: 0.5rem; }
+  .svc-tab { font-size: 0.78rem; padding: 0.4rem 1rem; }
+  .services-bottom-cta { padding: 2.5rem 1.2rem; }
+  .services-hero { text-align: center; padding: 8rem 1.2rem 3rem; }
+}
+@media (max-width: 480px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .service-card { padding: 1.3rem; }
+  .service-badge { top: 1rem; right: 1rem; font-size: 0.65rem; }
+  .services-bottom-cta { padding: 2rem 1rem; border-radius: 14px; }
+  .modal { max-height: 85vh; overflow-y: auto; }
+}
+</style>
+
+<script src="js/script.js"></script>
+<script>
+// Service filter tabs
+const svcTabs = document.querySelectorAll('.svc-tab');
+const serviceCards = document.querySelectorAll('#servicesGrid .service-card');
+
+svcTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    svcTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const cat = tab.dataset.cat;
+    serviceCards.forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.classList.remove('s-hidden');
+      } else {
+        card.classList.add('s-hidden');
+      }
+    });
+  });
+});
+
+</script>
+</body>
+</html>
