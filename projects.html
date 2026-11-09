@@ -1,401 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | Kiran Majeed</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Kiran Majeed</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
-<!-- HEADER -->
-<header id="header" class="scrolled">
-  <nav class="nav">
-    <div class="logo">
-      <a href="index.html"><span class="logo-bracket">&lt;</span>Kiran Majeed<span class="logo-bracket">/&gt;</span></a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="index.html#about" class="nav-link">About</a></li>
-      <li><a href="index.html#skills" class="nav-link">Skills</a></li>
-      <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="projects.html" class="nav-link active">Projects</a></li>
-      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <button class="menu-btn" id="menuBtn">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="index.html#experience">Experience</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-<!-- PROJECTS HERO -->
-<section class="services-hero">
-  <div class="hero-bg">
-    <div class="hero-grid"></div>
-    <div class="hero-glow glow-1"></div>
-    <div class="hero-glow glow-2"></div>
-  </div>
-  <div class="container" style="position:relative;z-index:2;">
-    <div class="section-label" style="justify-content:center;margin-bottom:1rem;">
-      <span class="label-line"></span>
-      <span>MY WORK</span>
-      <span class="label-line"></span>
-    </div>
-    <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);text-align:center;margin-bottom:1rem;">
-      All <span class="purple">Projects</span>
-    </h1>
-    <p class="section-subtitle" style="font-size:1.1rem;">
-      Browse my work by technology: WordPress, PHP and Laravel.
-    </p>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="pf-section">
-  <div class="container">
-
-    <!-- Main technology tabs -->
-    <div class="pf-tabs" id="pfTabs" role="tablist">
-      <span class="pf-indicator" id="pfIndicator"></span>
-      <button class="pf-tab active" data-tech="wordpress" role="tab">
-        <span class="pf-tab-icon">📝</span>
-        <span class="pf-tab-name">WordPress</span>
-        <span class="pf-tab-count" data-count="wordpress">0</span>
+  <!-- HEADER -->
+  <header id="header" class="scrolled">
+    <nav class="nav">
+      <div class="logo">
+        <a href="index.html"><span class="logo-bracket">&lt;</span>Kiran Majeed<span
+            class="logo-bracket">/&gt;</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn">
+        <span></span><span></span><span></span>
       </button>
-      <button class="pf-tab" data-tech="php" role="tab">
-        <span class="pf-tab-icon">🐘</span>
-        <span class="pf-tab-name">PHP</span>
-        <span class="pf-tab-count" data-count="php">0</span>
-      </button>
-      <button class="pf-tab" data-tech="laravel" role="tab">
-        <span class="pf-tab-icon">🧩</span>
-        <span class="pf-tab-name">Laravel</span>
-        <span class="pf-tab-count" data-count="laravel">0</span>
-      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Tab intro -->
-    <div class="pf-intro" id="pfIntro">
-      <h2 id="pfIntroTitle"></h2>
-      <p id="pfIntroText"></p>
+  <!-- PROJECTS HERO -->
+  <section class="services-hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
     </div>
-
-    <!-- Sub-category chips (change with the tab) -->
-    <div class="pf-chips" id="pfChips"></div>
-    <p class="pf-result" id="pfResult"></p>
-
-    <!-- Project cards are rendered here from the list in the script below -->
-    <div class="pf-grid" id="pfGrid"></div>
-
-    <div class="services-bottom-cta reveal-up">
-      <h2 class="section-title" style="text-align:center;margin-bottom:1rem;">
-        Have a project <span class="purple">in mind?</span>
-      </h2>
-      <p style="text-align:center;color:var(--gray-light);margin-bottom:2rem;">
-        Tell me what you need and let's build it together.
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="section-label" style="justify-content:center;margin-bottom:1rem;">
+        <span class="label-line"></span>
+        <span>MY WORK</span>
+        <span class="label-line"></span>
+      </div>
+      <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);text-align:center;margin-bottom:1rem;">
+        All <span class="purple">Projects</span>
+      </h1>
+      <p class="section-subtitle" style="font-size:1.1rem;">
+        Browse my work by technology: WordPress, PHP and Laravel.
       </p>
-      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a href="index.html#contact" class="btn btn-primary"><span>Get in Touch</span></a>
-        <a href="services.html" class="btn btn-ghost"><span>View Services</span></a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="pf-section">
+    <div class="container">
+
+      <!-- Main technology tabs -->
+      <div class="pf-tabs" id="pfTabs" role="tablist">
+        <span class="pf-indicator" id="pfIndicator"></span>
+        <button class="pf-tab active" data-tech="wordpress" role="tab">
+          <span class="pf-tab-icon">📝</span>
+          <span class="pf-tab-name">WordPress</span>
+          <span class="pf-tab-count" data-count="wordpress">0</span>
+        </button>
+        <button class="pf-tab" data-tech="php" role="tab">
+          <span class="pf-tab-icon">🐘</span>
+          <span class="pf-tab-name">PHP</span>
+          <span class="pf-tab-count" data-count="php">0</span>
+        </button>
+        <button class="pf-tab" data-tech="laravel" role="tab">
+          <span class="pf-tab-icon">🧩</span>
+          <span class="pf-tab-name">Laravel</span>
+          <span class="pf-tab-count" data-count="laravel">0</span>
+        </button>
+      </div>
+
+      <!-- Tab intro -->
+      <div class="pf-intro" id="pfIntro">
+        <h2 id="pfIntroTitle"></h2>
+        <p id="pfIntroText"></p>
+      </div>
+
+      <!-- Sub-category chips (change with the tab) -->
+      <div class="pf-chips" id="pfChips"></div>
+      <p class="pf-result" id="pfResult"></p>
+
+      <!-- Project cards are rendered here from the list in the script below -->
+      <div class="pf-grid" id="pfGrid"></div>
+
+      <div class="services-bottom-cta reveal-up">
+        <h2 class="section-title" style="text-align:center;margin-bottom:1rem;">
+          Have a project <span class="purple">in mind?</span>
+        </h2>
+        <p style="text-align:center;color:var(--gray-light);margin-bottom:2rem;">
+          Tell me what you need and let's build it together.
+        </p>
+        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+          <a href="index.html#contact" class="btn btn-primary"><span>Get in Touch</span></a>
+          <a href="services.html" class="btn btn-ghost"><span>View Services</span></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-logo">
-      <span class="logo-bracket">&lt;</span>Kiran Majeed<span class="logo-bracket">/&gt;</span>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Kiran Majeed<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p>Building reliable web applications and websites.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </div>
-    <p>Building reliable web applications and websites.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#skills">Skills</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="index.html#contact">Contact</a>
+    <div class="footer-bottom">
+      <p>© 2026 Kiran Majeed. All rights reserved.</p>
+      <p class="footer-scroll-top"><a href="#">↑ Back to Top</a></p>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Kiran Majeed. All rights reserved.</p>
-    <p class="footer-scroll-top"><a href="#">↑ Back to Top</a></p>
-  </div>
-</footer>
+  </footer>
 
-<style>
-.services-bottom-cta {
-  border: 1px solid var(--border);
-  border-radius: 20px; padding: 4rem 2rem; margin-top: 4rem; text-align: center;
-  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(13,13,20,0.9));
-}
-.pf-section { padding: 1rem 0 6rem; position: relative; }
+  <style>
+    .services-bottom-cta {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(13, 13, 20, 0.9));
+    }
 
-/* ---------- main tabs ---------- */
-.pf-tabs {
-  position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0; max-width: 640px; margin: 0 auto 3rem; padding: 6px;
-  background: rgba(18,18,28,0.9); border: 1px solid var(--border);
-  border-radius: 20px; backdrop-filter: blur(10px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 0 40px rgba(124,58,237,0.06);
-}
-.pf-indicator {
-  position: absolute; top: 6px; bottom: 6px; left: 6px; width: calc((100% - 12px) / 3);
-  background: var(--gradient); border-radius: 15px;
-  box-shadow: 0 8px 30px var(--purple-glow);
-  transition: transform .45s cubic-bezier(.65,.05,.36,1);
-}
-.pf-tab {
-  position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
-  gap: .55rem; padding: 1rem .5rem; background: none; border: 0; cursor: pointer;
-  color: var(--gray-light); font-family: var(--font-display); font-weight: 700;
-  font-size: 1rem; letter-spacing: .3px; border-radius: 15px; transition: color .3s;
-}
-.pf-tab:hover { color: #fff; }
-.pf-tab.active { color: #fff; }
-.pf-tab-icon { font-size: 1.25rem; }
-.pf-tab-count {
-  font-family: var(--font-mono); font-size: .7rem; padding: .15rem .5rem; border-radius: 50px;
-  background: rgba(255,255,255,0.1); color: inherit;
-}
-.pf-tab.active .pf-tab-count { background: rgba(255,255,255,0.25); }
+    .pf-section {
+      padding: 1rem 0 6rem;
+      position: relative;
+    }
 
-/* ---------- intro ---------- */
-.pf-intro { text-align: center; max-width: 620px; margin: 0 auto 2rem; }
-.pf-intro h2 {
-  font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.3rem);
-  font-weight: 800; margin-bottom: .6rem;
-}
-.pf-intro h2 span { color: var(--purple-bright); }
-.pf-intro p { color: var(--gray); line-height: 1.7; }
+    /* ---------- main tabs ---------- */
+    .pf-tabs {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      padding: 6px;
+      background: rgba(18, 18, 28, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 0 40px rgba(124, 58, 237, 0.06);
+    }
 
-/* ---------- chips ---------- */
-.pf-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-bottom: 1rem; }
-.pf-chip {
-  padding: .55rem 1.2rem; border-radius: 50px; cursor: pointer;
-  background: rgba(13,13,20,0.8); border: 1px solid var(--border); color: var(--gray-light);
-  font-family: var(--font-body); font-size: .88rem; font-weight: 500;
-  transition: all .3s; animation: pfPop .4s both;
-}
-.pf-chip:hover { border-color: var(--purple-bright); color: #fff; transform: translateY(-2px); }
-.pf-chip.active { background: var(--purple-subtle); border-color: var(--purple-bright); color: #fff; box-shadow: 0 0 20px var(--purple-glow); }
-.pf-chip small { font-family: var(--font-mono); opacity: .6; margin-left: .35rem; }
-.pf-result { text-align: center; color: var(--gray); font-family: var(--font-mono); font-size: .75rem; letter-spacing: 1px; margin-bottom: 2.5rem; }
+    .pf-indicator {
+      position: absolute;
+      top: 6px;
+      bottom: 6px;
+      left: 6px;
+      width: calc((100% - 12px) / 3);
+      background: var(--gradient);
+      border-radius: 15px;
+      box-shadow: 0 8px 30px var(--purple-glow);
+      transition: transform .45s cubic-bezier(.65, .05, .36, 1);
+    }
 
-/* ---------- cards ---------- */
-.pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; min-height: 200px; }
-@media (max-width: 950px) { .pf-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .pf-grid { grid-template-columns: 1fr; } }
-.pf-card {
-  position: relative; display: flex; flex-direction: column; overflow: hidden;
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px;
-  transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .4s;
-  animation: pfIn .55s both;
-}
-.pf-card::before {
-  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0;
-  background: radial-gradient(600px circle at var(--mx,50%) var(--my,0%), rgba(168,85,247,0.16), transparent 40%);
-  transition: opacity .3s;
-}
-.pf-card:hover { transform: translateY(-8px); border-color: var(--purple-bright); box-shadow: 0 25px 60px rgba(124,58,237,0.25); }
-.pf-card:hover::before { opacity: 1; }
-.pf-cover {
-  position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
-  background: var(--cover, linear-gradient(135deg,#2e1065,#5b21b6)); overflow: hidden;
-}
-.pf-cover::after {
-  content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 28px 28px; mask-image: radial-gradient(circle at center, #000 30%, transparent 75%);
-}
-.pf-emoji { position: relative; z-index: 1; font-size: 3.6rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)); transition: transform .4s; }
-.pf-card:hover .pf-emoji { transform: scale(1.15) rotate(-5deg); }
-.pf-img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .5s; }
-.pf-card:hover .pf-img { transform: scale(1.06); }
-.pf-cover.has-img::after { display: none; }
-.pf-cover.has-img::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 35%); }
-.pf-badge {
-  position: absolute; top: .9rem; left: .9rem; z-index: 2; padding: .25rem .8rem; border-radius: 50px;
-  background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(6px);
-  font-size: .68rem; font-weight: 600; letter-spacing: .4px; color: #fff;
-}
-.pf-status {
-  position: absolute; top: .9rem; right: .9rem; z-index: 2; padding: .25rem .8rem; border-radius: 50px;
-  background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(6px);
-  font-size: .68rem; font-weight: 600; color: #86efac;
-}
-.pf-status.ongoing { color: #fbbf24; }
-.pf-info { padding: 1.5rem 1.5rem 1.7rem; display: flex; flex-direction: column; gap: .8rem; flex: 1; }
-.pf-info h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
-.pf-info p { color: var(--gray); font-size: .9rem; line-height: 1.7; flex: 1; }
-.pf-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
-.pf-tags span {
-  font-family: var(--font-mono); font-size: .68rem; padding: .22rem .65rem; border-radius: 6px;
-  background: var(--purple-subtle); color: var(--purple-light); border: 1px solid var(--border);
-}
-.pf-link { align-self: flex-start; color: var(--purple-bright); font-weight: 600; font-size: .88rem; text-decoration: none; }
-.pf-link:hover { text-decoration: underline; }
+    .pf-tab {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      padding: 1rem .5rem;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      color: var(--gray-light);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: .3px;
+      border-radius: 15px;
+      transition: color .3s;
+    }
 
-/* ---------- empty state ---------- */
-.pf-empty {
-  grid-column: 1 / -1; text-align: center; padding: 4rem 1.5rem; border: 1px dashed var(--border);
-  border-radius: 20px; background: rgba(13,13,20,0.5); animation: pfIn .5s both;
-}
-.pf-empty span { font-size: 2.6rem; display: block; margin-bottom: .8rem; }
-.pf-empty h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: .4rem; }
-.pf-empty p { color: var(--gray); font-size: .9rem; }
+    .pf-tab:hover {
+      color: #fff;
+    }
 
-@keyframes pfIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
-@keyframes pfPop { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
+    .pf-tab.active {
+      color: #fff;
+    }
 
-@media (max-width: 768px) {
-  .pf-tab { flex-direction: column; gap: .2rem; padding: .8rem .3rem; font-size: .85rem; }
-  .pf-tab-count { display: none; }
-  .services-hero { padding: 8rem 1.2rem 3rem; }
-  .services-bottom-cta { padding: 2.5rem 1.2rem; }
-}
-</style>
+    .pf-tab-icon {
+      font-size: 1.25rem;
+    }
 
-<script src="js/script.js"></script>
-<script>
-/* =====================================================================
-   PROJECTS LIST - edit / add your projects here
-   tech : "wordpress" | "php" | "laravel"
-   sub  : the sub-category key, or a list of keys e.g. ["business", "custom"] (see CATEGORIES below)
-   url  : optional live link (shows a "Visit Site" button)
-   status : optional "Ongoing" | "Completed" | "Client Project" ...
-   img  : optional cover image path (shown instead of the emoji)
-   ===================================================================== */
-const PROJECTS = [
-  /* ---------- WordPress ---------- */
-  // woocommerce
-  { tech: "wordpress", sub: "woocommerce", emoji: "🧴", title: "White Cover Skincare Store",
-    desc: "E-commerce store for a Lahore-based skincare brand with product categories, discounts, quick view, wishlist and Slider Revolution banners.",
-    tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://whitecover.pk", img: "images/portfolio/white-cover.webp" },
-  { tech: "wordpress", sub: "woocommerce", emoji: "🎆", title: "Morethan Fireworks (UK)",
-    desc: "WooCommerce store with a category-based catalogue, sale pricing, wishlist and compare features, and a full cart and checkout flow.",
-    tags: ["WordPress", "WooCommerce", "UK Client"], status: "Client Project", url: "https://morethanfireworks.com", img: "images/portfolio/morethan-fireworks.webp" },
-  { tech: "wordpress", sub: "woocommerce", emoji: "🔥", title: "Wiqaya Tech Fire Safety & Security Website",
-    desc: "WooCommerce website for a Lebanon-based fire safety and security company, with a multi-level product catalogue, featured and sale products, product search, a Slider Revolution banner, a contact form and WhatsApp chat.",
-    tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://wiqayatech.com", img: "images/portfolio/wiqaya-tech.webp" },
-      { tech: "wordpress", sub: "woocommerce", emoji: "👗", title: "Romanza Fashion Store",
-    desc: "Online fashion store with product categories, a full cart and checkout flow, and a responsive shopping experience on every device.",
-    tags: ["WordPress", "WooCommerce", "Fashion"], status: "Client Project", url: "https://romanzafashion.com.pk", img: "images/portfolio/romanza-fashion.webp" },
-    // business
-  { tech: "wordpress", sub: "business", emoji: "🧪", title: "Alnas Medical Lab Website",
-    desc: "Professional website for a medical laboratory, built to present its services clearly and work well on every device.",
-    tags: ["Business Website", "Responsive", "Healthcare"], status: "Client Project", url: "https://alnasmedical.com", img: "images/portfolio/alnas-lab.webp" },
-    { tech: "wordpress", sub: ["business"], emoji: "🏥", title: "Careway Medical Lab Website",
-    desc: "Elementor-based website for a diagnostic laboratory with branches in Lahore and Karachi, featuring a Slider Revolution banner, lab services listing, appointment request form and an online report-finding portal.",
-    tags: ["WordPress", "Elementor", "Slider Revolution", "Healthcare"], status: "Client Project", url: "https://carewaymedicallab.com", img: "images/portfolio/careway-lab.webp" },
-     { tech: "wordpress", sub: "business", emoji: "✈️", title: "Pace Travel Website (UK)",
-    desc: "Elementor-based website for a UK travel agency, with a flight enquiry form, tours and activities listings, destination categories, featured trips with sale pricing and WhatsApp chat.",
-    tags: ["WordPress", "Elementor", "Travel", "UK Client"], status: "Client Project", url: "https://pacetravels.co.uk", img: "images/portfolio/pace-travel.webp" },
-    // business + custom
-    { tech: "wordpress", sub: ["business", "custom"], emoji: "📦", title: "Andaz Packages Website",
-    desc: "Elementor-based corporate website for a printing and packaging company, with service pages and a quote-request flow.",
-    tags: ["WordPress", "Elementor", "Business Website"], status: "Client Project", url: "https://andazpackages.com", img: "images/portfolio/andaz-packages.webp" },
+    .pf-tab-count {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      padding: .15rem .5rem;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      color: inherit;
+    }
 
-  /* ---------- PHP ---------- */
-  { tech: "php", sub: "websites", emoji: "🌐", title: "PHP Business Websites",
-    desc: "Dynamic websites built with PHP for businesses, with pages and content that are easy to update.",
-    tags: ["Core PHP", "MySQL", "Responsive"] },
-  { tech: "php", sub: "inventory", emoji: "📦", title: "PHP Inventory System",
-    desc: "Inventory management system built in core PHP for tracking products and stock.",
-    tags: ["Core PHP", "MySQL"] },
-  { tech: "php", sub: "dashboard", emoji: "📊", title: "Custom JavaScript Dashboard",
-    desc: "A custom dashboard built with JavaScript on a PHP backend, showing business data clearly.",
-    tags: ["JavaScript", "Core PHP"] },
-  { tech: "php", sub: "webapps", emoji: "🗂️", title: "Core PHP Web Applications",
-    desc: "Web applications developed in core PHP around specific business requirements.",
-    tags: ["Core PHP", "MySQL"] },
+    .pf-tab.active .pf-tab-count {
+      background: rgba(255, 255, 255, 0.25);
+    }
 
-  /* ---------- Laravel ---------- */
-  { tech: "laravel", sub: "webapps", emoji: "🏗️", title: "Real Estate & Construction Management",
-    desc: "Laravel-based system for plot sales, installments, construction materials and project-wise accounts. Development is ongoing.",
-    tags: ["Laravel", "MySQL", "Reports"], status: "Ongoing", img: "images/portfolio/real-estate.webp" },
-  { tech: "laravel", sub: "webapps", emoji: "📒", title: "EasyBooks Enterprises Software",
-    desc: "Laravel-based business software with continuous feature development, reports and improvements. Currently in progress.",
-    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/easybooks.webp" },
-  { tech: "laravel", sub: "webapps", emoji: "👔", title: "Software for Creative Uniform (UAE)",
-    desc: "Laravel-based business management software built for Creative Uniform, covering day-to-day operations, accounts and reports.",
-    tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/creative-easybooks.webp" },
-  { tech: "laravel", sub: "api", emoji: "🔌", title: "Task Management REST API",
-    desc: "Token-authenticated API with projects, tasks, comments and labels, running on Laravel Sail and tested with Postman.",
-    tags: ["Laravel", "Sanctum", "Docker", "Postman"] },
-];
+    /* ---------- intro ---------- */
+    .pf-intro {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 2rem;
+    }
 
-/* Tabs, their intro text and sub-categories (chips) */
-const CATEGORIES = {
-  wordpress: {
-    title: 'WordPress <span>Websites</span>',
-    text: "Business, custom, WooCommerce and landing page websites built with WordPress and Elementor.",
-    cover: "linear-gradient(135deg,#1e3a8a,#7c3aed)",
-    subs: { business: "Business", custom: "Custom", woocommerce: "WooCommerce", landing: "Landing Page" },
-  },
-  php: {
-    title: 'PHP <span>Development</span>',
-    text: "Websites, inventory systems, dashboards and web applications built with core PHP.",
-    cover: "linear-gradient(135deg,#312e81,#6d28d9)",
-    subs: { websites: "Websites", webapps: "Web Applications", inventory: "Inventory Systems", dashboard: "Dashboards" },
-  },
-  laravel: {
-    title: 'Laravel <span>Applications</span>',
-    text: "Websites and web applications built with Laravel, from database design to the final screens.",
-    cover: "linear-gradient(135deg,#7f1d1d,#7c3aed)",
-    subs: { websites: "Websites", webapps: "Web Applications", api: "REST APIs" },
-  },
-};
+    .pf-intro h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: .6rem;
+    }
 
-const el = (id) => document.getElementById(id);
-// a project's sub can be one key ("business") or a list (["business", "custom"])
-const subsOf = (p) => [].concat(p.sub);
-const tabs = [...document.querySelectorAll(".pf-tab")];
-const order = ["wordpress", "php", "laravel"];
-let tech = "wordpress", sub = "all";
+    .pf-intro h2 span {
+      color: var(--purple-bright);
+    }
 
-function moveIndicator() {
-  el("pfIndicator").style.transform = `translateX(${order.indexOf(tech) * 100}%)`;
-}
+    .pf-intro p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
 
-function render() {
-  const cat = CATEGORIES[tech];
-  const inTech = PROJECTS.filter((p) => p.tech === tech);
+    /* ---------- chips ---------- */
+    .pf-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .7rem;
+      margin-bottom: 1rem;
+    }
 
-  // intro
-  el("pfIntroTitle").innerHTML = cat.title;
-  el("pfIntroText").textContent = cat.text;
+    .pf-chip {
+      padding: .55rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      background: rgba(13, 13, 20, 0.8);
+      border: 1px solid var(--border);
+      color: var(--gray-light);
+      font-family: var(--font-body);
+      font-size: .88rem;
+      font-weight: 500;
+      transition: all .3s;
+      animation: pfPop .4s both;
+    }
 
-  // chips
-  const chips = [["all", "All", inTech.length]].concat(
-    Object.entries(cat.subs).map(([k, label]) => [k, label, inTech.filter((p) => subsOf(p).includes(k)).length])
-  );
-  el("pfChips").innerHTML = chips.map(([k, label, n], i) =>
-    `<button class="pf-chip ${k === sub ? "active" : ""}" data-sub="${k}" style="animation-delay:${i * 50}ms">${label}<small>${n}</small></button>`
-  ).join("");
+    .pf-chip:hover {
+      border-color: var(--purple-bright);
+      color: #fff;
+      transform: translateY(-2px);
+    }
 
-  // cards
-  const list = inTech.filter((p) => sub === "all" || subsOf(p).includes(sub));
-  el("pfResult").textContent = `SHOWING ${list.length} ${list.length === 1 ? "PROJECT" : "PROJECTS"}`;
-  el("pfGrid").innerHTML = list.length ? list.map((p, i) => `
+    .pf-chip.active {
+      background: var(--purple-subtle);
+      border-color: var(--purple-bright);
+      color: #fff;
+      box-shadow: 0 0 20px var(--purple-glow);
+    }
+
+    .pf-chip small {
+      font-family: var(--font-mono);
+      opacity: .6;
+      margin-left: .35rem;
+    }
+
+    .pf-result {
+      text-align: center;
+      color: var(--gray);
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: 1px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ---------- cards ---------- */
+    .pf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      min-height: 200px;
+    }
+
+    @media (max-width: 950px) {
+      .pf-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pf-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pf-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: transform .4s cubic-bezier(.2, .8, .2, 1), border-color .3s, box-shadow .4s;
+      animation: pfIn .55s both;
+    }
+
+    .pf-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0;
+      background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 0%), rgba(168, 85, 247, 0.16), transparent 40%);
+      transition: opacity .3s;
+    }
+
+    .pf-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--purple-bright);
+      box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
+    }
+
+    .pf-card:hover::before {
+      opacity: 1;
+    }
+
+    .pf-cover {
+      position: relative;
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cover, linear-gradient(135deg, #2e1065, #5b21b6));
+      overflow: hidden;
+    }
+
+    .pf-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(circle at center, #000 30%, transparent 75%);
+    }
+
+    .pf-emoji {
+      position: relative;
+      z-index: 1;
+      font-size: 3.6rem;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+      transition: transform .4s;
+    }
+
+    .pf-card:hover .pf-emoji {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .pf-img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform .5s;
+    }
+
+    .pf-card:hover .pf-img {
+      transform: scale(1.06);
+    }
+
+    .pf-cover.has-img::after {
+      display: none;
+    }
+
+    .pf-cover.has-img::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent 35%);
+    }
+
+    .pf-badge {
+      position: absolute;
+      top: .9rem;
+      left: .9rem;
+      z-index: 2;
+      padding: .25rem .8rem;
+      border-radius: 50px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .4px;
+      color: #fff;
+    }
+
+    .pf-status {
+      position: absolute;
+      top: .9rem;
+      right: .9rem;
+      z-index: 2;
+      padding: .25rem .8rem;
+      border-radius: 50px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+      font-size: .68rem;
+      font-weight: 600;
+      color: #86efac;
+    }
+
+    .pf-status.ongoing {
+      color: #fbbf24;
+    }
+
+    .pf-info {
+      padding: 1.5rem 1.5rem 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      flex: 1;
+    }
+
+    .pf-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .pf-info p {
+      color: var(--gray);
+      font-size: .9rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .pf-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }
+
+    .pf-tags span {
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      padding: .22rem .65rem;
+      border-radius: 6px;
+      background: var(--purple-subtle);
+      color: var(--purple-light);
+      border: 1px solid var(--border);
+    }
+
+    .pf-link {
+      align-self: flex-start;
+      color: var(--purple-bright);
+      font-weight: 600;
+      font-size: .88rem;
+      text-decoration: none;
+    }
+
+    .pf-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- empty state ---------- */
+    .pf-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      border: 1px dashed var(--border);
+      border-radius: 20px;
+      background: rgba(13, 13, 20, 0.5);
+      animation: pfIn .5s both;
+    }
+
+    .pf-empty span {
+      font-size: 2.6rem;
+      display: block;
+      margin-bottom: .8rem;
+    }
+
+    .pf-empty h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: .4rem;
+    }
+
+    .pf-empty p {
+      color: var(--gray);
+      font-size: .9rem;
+    }
+
+    @keyframes pfIn {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes pfPop {
+      from {
+        opacity: 0;
+        transform: scale(.85);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pf-tab {
+        flex-direction: column;
+        gap: .2rem;
+        padding: .8rem .3rem;
+        font-size: .85rem;
+      }
+
+      .pf-tab-count {
+        display: none;
+      }
+
+      .services-hero {
+        padding: 8rem 1.2rem 3rem;
+      }
+
+      .services-bottom-cta {
+        padding: 2.5rem 1.2rem;
+      }
+    }
+  </style>
+
+  <script src="js/script.js"></script>
+  <script>
+    /* =====================================================================
+       PROJECTS LIST - edit / add your projects here
+       tech : "wordpress" | "php" | "laravel"
+       sub  : the sub-category key, or a list of keys e.g. ["business", "custom"] (see CATEGORIES below)
+       url  : optional live link (shows a "Visit Site" button)
+       status : optional "Ongoing" | "Completed" | "Client Project" ...
+       img  : optional cover image path (shown instead of the emoji)
+       ===================================================================== */
+    const PROJECTS = [
+      /* ---------- WordPress ---------- */
+      // woocommerce
+      {
+        tech: "wordpress", sub: "woocommerce", emoji: "🧴", title: "White Cover Skincare Store",
+        desc: "E-commerce store for a Lahore-based skincare brand with product categories, discounts, quick view, wishlist and Slider Revolution banners.",
+        tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://whitecover.pk", img: "images/portfolio/white-cover.webp"
+      },
+      {
+        tech: "wordpress", sub: "woocommerce", emoji: "🎆", title: "Morethan Fireworks (UK)",
+        desc: "WooCommerce store with a category-based catalogue, sale pricing, wishlist and compare features, and a full cart and checkout flow.",
+        tags: ["WordPress", "WooCommerce", "UK Client"], status: "Client Project", url: "https://morethanfireworks.com", img: "images/portfolio/morethan-fireworks.webp"
+      },
+       {
+        tech: "wordpress", sub: ["business", "custom"], emoji: "📦", title: "Andaz Packages Website",
+        desc: "Elementor-based corporate website for a printing and packaging company, with service pages and a quote-request flow.",
+        tags: ["WordPress", "Elementor", "Business Website"], status: "Client Project", url: "https://andazpackages.com", img: "images/portfolio/andaz-packages.webp"
+      },
+      {
+        tech: "wordpress", sub: "business", emoji: "🧪", title: "Alnas Medical Lab Website",
+        desc: "Professional website for a medical laboratory, built to present its services clearly and work well on every device.",
+        tags: ["Business Website", "Responsive", "Healthcare"], status: "Client Project", url: "https://alnasmedical.com", img: "images/portfolio/alnas-lab.webp"
+      },
+      {
+        tech: "wordpress", sub: "woocommerce", emoji: "🔥", title: "Wiqaya Tech Fire Safety & Security Website",
+        desc: "WooCommerce website for a Lebanon-based fire safety and security company, with a multi-level product catalogue, featured and sale products, product search, a Slider Revolution banner, a contact form and WhatsApp chat.",
+        tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://wiqayatech.com", img: "images/portfolio/wiqaya-tech.webp"
+      },
+        
+      {
+        tech: "wordpress", sub: "woocommerce", emoji: "👗", title: "Romanza Fashion Store",
+        desc: "Online fashion store with product categories, a full cart and checkout flow, and a responsive shopping experience on every device.",
+        tags: ["WordPress", "WooCommerce", "Fashion"], status: "Client Project", url: "https://romanzafashion.com.pk", img: "images/portfolio/romanza-fashion.webp"
+      },
+      
+      // business
+    
+      {
+        tech: "wordpress", sub: ["business"], emoji: "🏥", title: "Careway Medical Lab Website",
+        desc: "Elementor-based website for a diagnostic laboratory with branches in Lahore and Karachi, featuring a Slider Revolution banner, lab services listing, appointment request form and an online report-finding portal.",
+        tags: ["WordPress", "Elementor", "Slider Revolution", "Healthcare"], status: "Client Project", url: "https://carewaymedicallab.com", img: "images/portfolio/careway-lab.webp"
+      },
+      {
+        tech: "wordpress", sub: "business", emoji: "✈️", title: "Pace Travel Website (UK)",
+        desc: "Elementor-based website for a UK travel agency, with a flight enquiry form, tours and activities listings, destination categories, featured trips with sale pricing and WhatsApp chat.",
+        tags: ["WordPress", "Elementor", "Travel", "UK Client"], status: "Client Project", url: "https://pacetravels.co.uk", img: "images/portfolio/pace-travel.webp"
+      },
+      {
+      tech: "wordpress", sub: "business", emoji: "📦", title: "Big Box General Trading Website",
+      desc: "Elementor-based corporate website for a Lahore printing, packaging and branding company, with a Slider Revolution banner, service pages for printing, signage and stall fabrication, a call-back request form and a trading section.",
+      tags: ["WordPress", "Elementor", "Slider Revolution", "Business Website"], status: "Client Project", url: "https://bigbox.net.pk", img: "images/portfolio/bigbox.webp"
+     },
+      // business + custom
+     
+      {
+        tech: "wordpress", sub: "woocommerce", emoji: "🚽", title: "Magma Ceramics Sanitary Ware Website",
+        desc: "WooCommerce website for a Pakistani sanitary ware brand, with a category-based catalogue of basin pedestals, commodes and vanities, quick view, wishlist and compare features, a Slider Revolution banner and a blog.",
+        tags: ["WordPress", "WooCommerce", "Slider Revolution"], status: "Client Project", url: "https://magmaceramics.pk", img: "images/portfolio/magma-ceramics.webp"
+      },
+            {
+        tech: "wordpress", sub: "business", emoji: "👕", title: "Green Village Industry Garments Website",
+        desc: "Elementor-based corporate website for a garment manufacturer and exporter, with a Slider Revolution banner, services and products pages, a company profile and a contact page.",
+        tags: ["WordPress", "Elementor", "Slider Revolution", "Business Website"], status: "Client Project", url: "https://greenvillageindustry.com", img: "images/portfolio/green-village.webp"
+      },
+
+      /* ---------- PHP ---------- */
+      {
+        tech: "php", sub: "websites", emoji: "🌐", title: "PHP Business Websites",
+        desc: "Dynamic websites built with PHP for businesses, with pages and content that are easy to update.",
+        tags: ["Core PHP", "MySQL", "Responsive"]
+      },
+      {
+        tech: "php", sub: "inventory", emoji: "📦", title: "PHP Inventory System",
+        desc: "Inventory management system built in core PHP for tracking products and stock.",
+        tags: ["Core PHP", "MySQL"]
+      },
+      {
+        tech: "php", sub: "dashboard", emoji: "📊", title: "Custom JavaScript Dashboard",
+        desc: "A custom dashboard built with JavaScript on a PHP backend, showing business data clearly.",
+        tags: ["JavaScript", "Core PHP"]
+      },
+      {
+        tech: "php", sub: "webapps", emoji: "🗂️", title: "Core PHP Web Applications",
+        desc: "Web applications developed in core PHP around specific business requirements.",
+        tags: ["Core PHP", "MySQL"]
+      },
+
+      /* ---------- Laravel ---------- */
+      {
+        tech: "laravel", sub: "webapps", emoji: "🏗️", title: "Real Estate & Construction Management",
+        desc: "Laravel-based system for plot sales, installments, construction materials and project-wise accounts. Development is ongoing.",
+        tags: ["Laravel", "MySQL", "Reports"], status: "Ongoing", img: "images/portfolio/real-estate.webp"
+      },
+      {
+        tech: "laravel", sub: "webapps", emoji: "📒", title: "EasyBooks Enterprises Software",
+        desc: "Laravel-based business software with continuous feature development, reports and improvements. Currently in progress.",
+        tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/easybooks.webp"
+      },
+      {
+        tech: "laravel", sub: "webapps", emoji: "👔", title: "Software for Creative Uniform (UAE)",
+        desc: "Laravel-based business management software built for Creative Uniform, covering day-to-day operations, accounts and reports.",
+        tags: ["Laravel", "PHP", "MySQL"], status: "Ongoing", img: "images/portfolio/creative-easybooks.webp"
+      },
+      {
+        tech: "laravel", sub: "api", emoji: "🔌", title: "Task Management REST API",
+        desc: "Token-authenticated API with projects, tasks, comments and labels, running on Laravel Sail and tested with Postman.",
+        tags: ["Laravel", "Sanctum", "Docker", "Postman"]
+      },
+    ];
+
+    /* Tabs, their intro text and sub-categories (chips) */
+    const CATEGORIES = {
+      wordpress: {
+        title: 'WordPress <span>Websites</span>',
+        text: "Business, custom, WooCommerce and landing page websites built with WordPress and Elementor.",
+        cover: "linear-gradient(135deg,#1e3a8a,#7c3aed)",
+        subs: { business: "Business", custom: "Custom", woocommerce: "WooCommerce", landing: "Landing Page" },
+      },
+      php: {
+        title: 'PHP <span>Development</span>',
+        text: "Websites, inventory systems, dashboards and web applications built with core PHP.",
+        cover: "linear-gradient(135deg,#312e81,#6d28d9)",
+        subs: { websites: "Websites", webapps: "Web Applications", inventory: "Inventory Systems", dashboard: "Dashboards" },
+      },
+      laravel: {
+        title: 'Laravel <span>Applications</span>',
+        text: "Websites and web applications built with Laravel, from database design to the final screens.",
+        cover: "linear-gradient(135deg,#7f1d1d,#7c3aed)",
+        subs: { websites: "Websites", webapps: "Web Applications", api: "REST APIs" },
+      },
+    };
+
+    const el = (id) => document.getElementById(id);
+    // a project's sub can be one key ("business") or a list (["business", "custom"])
+    const subsOf = (p) => [].concat(p.sub);
+    const tabs = [...document.querySelectorAll(".pf-tab")];
+    const order = ["wordpress", "php", "laravel"];
+    let tech = "wordpress", sub = "all";
+
+    function moveIndicator() {
+      el("pfIndicator").style.transform = `translateX(${order.indexOf(tech) * 100}%)`;
+    }
+
+    function render() {
+      const cat = CATEGORIES[tech];
+      const inTech = PROJECTS.filter((p) => p.tech === tech);
+
+      // intro
+      el("pfIntroTitle").innerHTML = cat.title;
+      el("pfIntroText").textContent = cat.text;
+
+      // chips
+      const chips = [["all", "All", inTech.length]].concat(
+        Object.entries(cat.subs).map(([k, label]) => [k, label, inTech.filter((p) => subsOf(p).includes(k)).length])
+      );
+      el("pfChips").innerHTML = chips.map(([k, label, n], i) =>
+        `<button class="pf-chip ${k === sub ? "active" : ""}" data-sub="${k}" style="animation-delay:${i * 50}ms">${label}<small>${n}</small></button>`
+      ).join("");
+
+      // cards
+      const list = inTech.filter((p) => sub === "all" || subsOf(p).includes(sub));
+      el("pfResult").textContent = `SHOWING ${list.length} ${list.length === 1 ? "PROJECT" : "PROJECTS"}`;
+      el("pfGrid").innerHTML = list.length ? list.map((p, i) => `
     <article class="pf-card" style="animation-delay:${i * 70}ms">
       <div class="pf-cover ${p.img ? "has-img" : ""}" style="--cover:${cat.cover}">
         <span class="pf-badge">${cat.subs[sub !== "all" && subsOf(p).includes(sub) ? sub : subsOf(p)[0]] || ""}</span>
@@ -411,38 +768,39 @@ function render() {
     </article>`).join("") : `
     <div class="pf-empty"><span>🚧</span><h4>More projects coming soon</h4>
     <p>I'm adding new ${cat.subs[sub] || ""} work here. Check back shortly.</p></div>`;
-}
+    }
 
-function setTech(t) {
-  tech = t; sub = "all";
-  tabs.forEach((b) => b.classList.toggle("active", b.dataset.tech === t));
-  moveIndicator(); render();
-  history.replaceState(null, "", "#" + t);
-}
+    function setTech(t) {
+      tech = t; sub = "all";
+      tabs.forEach((b) => b.classList.toggle("active", b.dataset.tech === t));
+      moveIndicator(); render();
+      history.replaceState(null, "", "#" + t);
+    }
 
-tabs.forEach((b) => b.addEventListener("click", () => setTech(b.dataset.tech)));
-el("pfChips").addEventListener("click", (e) => {
-  const c = e.target.closest(".pf-chip");
-  if (c) { sub = c.dataset.sub; render(); }
-});
-// soft spotlight on hover
-el("pfGrid").addEventListener("mousemove", (e) => {
-  const card = e.target.closest(".pf-card");
-  if (!card) return;
-  const r = card.getBoundingClientRect();
-  card.style.setProperty("--mx", e.clientX - r.left + "px");
-  card.style.setProperty("--my", e.clientY - r.top + "px");
-});
+    tabs.forEach((b) => b.addEventListener("click", () => setTech(b.dataset.tech)));
+    el("pfChips").addEventListener("click", (e) => {
+      const c = e.target.closest(".pf-chip");
+      if (c) { sub = c.dataset.sub; render(); }
+    });
+    // soft spotlight on hover
+    el("pfGrid").addEventListener("mousemove", (e) => {
+      const card = e.target.closest(".pf-card");
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", e.clientX - r.left + "px");
+      card.style.setProperty("--my", e.clientY - r.top + "px");
+    });
 
-// counts on the tabs
-order.forEach((t) => {
-  document.querySelector(`[data-count="${t}"]`).textContent = PROJECTS.filter((p) => p.tech === t).length;
-});
+    // counts on the tabs
+    order.forEach((t) => {
+      document.querySelector(`[data-count="${t}"]`).textContent = PROJECTS.filter((p) => p.tech === t).length;
+    });
 
-// open a tab directly with projects.html#laravel
-const start = location.hash.replace("#", "");
-setTech(order.includes(start) ? start : "wordpress");
-window.addEventListener("resize", moveIndicator);
-</script>
+    // open a tab directly with projects.html#laravel
+    const start = location.hash.replace("#", "");
+    setTech(order.includes(start) ? start : "wordpress");
+    window.addEventListener("resize", moveIndicator);
+  </script>
 </body>
+
 </html>
